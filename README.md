@@ -4,10 +4,10 @@ This extension updates User Settings with settings that could benefit screen rea
 
 ## Features
 
-When installed, you will have two commands available from Command Palette (Ctrl+Shift+P):
+When installed, you will have two commands available from the Command Palette (Ctrl+Shift+P):
 
 - Recommended User Settings (Screen Readers)
-- Toggle Quick Suggestions Ctrl+Alt+Q
+- Toggle Automatic Quick Suggestions Ctrl+Alt+Q
 
 ### Recommended User Settings (Screen Readers)
 
@@ -49,17 +49,17 @@ Updates User Settings as described below.
 
 ### Toggle Quick Suggestions Ctrl+Alt+Q
 
-Toggles  Quick Suggestions on or off.
+Toggles Automatic Quick Suggestions on or off. When disabled, Quick Suggestions can be triggered manually with Ctrl+space.
 
 ```
-// Quick Suggestions off
+// Automatic Quick Suggestions off
 "editor.quickSuggestions": {
     "other": false,
     "comments": false,
     "strings": false
 }
 
-// Quick Suggestions on (default)
+// Automatic Quick Suggestions on (default)
 "editor.quickSuggestions": {
     "other": true,
     "comments": false,

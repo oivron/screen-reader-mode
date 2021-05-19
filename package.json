@@ -37,7 +37,7 @@
 			},
 			{
 				"command": "recommendedsettings.toggleQuickSuggestions",
-				"title": "Toggle Quick Suggestions"
+				"title": "Toggle Automatic Quick Suggestions"
 			}
 		],
 		"keybindings": [

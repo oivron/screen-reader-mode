@@ -37,18 +37,18 @@ export function activate(context: vscode.ExtensionContext) {
 	});
 
 
-	// Quick suggestions toggle
+	// Automatic Quick suggestions toggle
 	function toggleQuickSuggestions() {
 		let suggestionsDisable = { "other": false, "comments": false, "strings": false };
 		let suggestionsDefault = { "other": true, "comments": false, "strings": false };
 		let status = vscode.workspace.getConfiguration("editor.quickSuggestions").get("other");
 		if (status) {
 			vscode.workspace.getConfiguration("editor").update("quickSuggestions", suggestionsDisable, vscode.ConfigurationTarget.Global);
-			vscode.window.showInformationMessage("Quick Suggestions disabled!");
+			vscode.window.showInformationMessage("Automatic Quick Suggestions disabled!");
 		}
 		else {
 			vscode.workspace.getConfiguration("editor").update("quickSuggestions", suggestionsDefault, vscode.ConfigurationTarget.Global);
-			vscode.window.showInformationMessage("Quick Suggestions enabled!");
+			vscode.window.showInformationMessage("Automatic Quick Suggestions enabled!");
 		}
 	}
 
