@@ -1,7 +1,7 @@
 {
 	"name": "recommendedsettings",
 	"displayName": "Recommended Settings",
-	"description": "Updates User and Workspace Settings with recommended settings for screen reader users.",
+	"description": "Updates User Settings with recommended settings for screen reader users.",
 	"version": "1.0.0",
 	"publisher": "Statped",
 	"author": {
