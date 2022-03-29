@@ -7,3 +7,16 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 ## [0.0.1] - 2021-05-18
 
 - Initial release
+
+## [1.0.0] - 2022-03-28
+
+- Security updates
+- Added Pylint argument for trailing newlines (C0305) and invalid-name (0103)
+- Added settings:
+    - security.workspace.trust.enabled: false
+    - python.languageServer: Pylance
+    - python.linting.enabled: true
+    - python.linting.pylintEnabled: true
+    - jupyter.disableJupyterAutoStart: true
+- Added Lisence
+- Updated readme file

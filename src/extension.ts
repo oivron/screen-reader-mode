@@ -20,13 +20,19 @@ export function activate(context: vscode.ExtensionContext) {
 		vscode.workspace.getConfiguration("editor.parameterHints").update("enabled", false, vscode.ConfigurationTarget.Global);
 		vscode.workspace.getConfiguration("editor").update("accessibilitySupport", "on", vscode.ConfigurationTarget.Global);
 
+		// Security
+		vscode.workspace.getConfiguration("security.workspace.trust").update("enabled", false, vscode.ConfigurationTarget.Global);
+
 		//Python
-		let myPylintArgs: string[] = ['--disable=W0614', '--disable=C0111', '--disable=W0401', '--disable=C0411', '--disable=C0413', '--disable=E0401', '--disable=C0326', '--disable=C0303'];
+		vscode.workspace.getConfiguration("python").update("languageServer", "Pylance", vscode.ConfigurationTarget.Global);
+		vscode.workspace.getConfiguration("python.linting").update("enabled", true, vscode.ConfigurationTarget.Global);
+		vscode.workspace.getConfiguration("python.linting").update("pylintEnabled", true, vscode.ConfigurationTarget.Global);
+		let myPylintArgs: string[] = ['--disable=W0614', '--disable=C0111', '--disable=W0401', '--disable=C0411', '--disable=C0413', '--disable=E0401', '--disable=C0326', '--disable=C0303', '--disable=C0305', '--disable=C0103'];
 		//let pylint = vscode.workspace.getConfiguration("python.linting").get("pylintArgs");
 		vscode.workspace.getConfiguration("python.linting").update("pylintArgs", myPylintArgs, vscode.ConfigurationTarget.Global);
-		vscode.workspace.getConfiguration("jupyter").update("disableJupyterAutoStart", true, vscode.ConfigurationTarget.Global);
 
 		//Misc
+		vscode.workspace.getConfiguration("jupyter").update("disableJupyterAutoStart", true, vscode.ConfigurationTarget.Global);
 		vscode.workspace.getConfiguration("extensions").update("ignoreRecommendations", true, vscode.ConfigurationTarget.Global);
 	}
 
