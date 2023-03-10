@@ -119,14 +119,5 @@ A description of all accessibility features in Visual Studio Code can be found a
 
 ## Release Notes
 
-## [1.1.0] - 2023-03-10
-
-- Removed disabling Pylint messages by numerical IDs (e.g. W0614)
-- Added disabling Pylint messages by category (e.g. W)
-- Added keybinding for easy access to the Status Bar
-- Added keybindings for macOS
-- Updated readme file
-- Updated description (package.json)
-- Replaced icon
-- Renamed extension Screen Reader Mode (previously Recommended Settings)
-- npm updates
+## [1.1.1] - 2023-03-10
+- Fixed typo in package.json

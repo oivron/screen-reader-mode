@@ -32,3 +32,6 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 - Replaced icon
 - Renamed extension Screen Reader Mode (previously Recommended Settings)
 - npm updates
+
+## [1.1.1] - 2023-03-10
+- Fixed typo in package.json
