@@ -13,6 +13,7 @@ export function activate(context: vscode.ExtensionContext) {
 		vscode.workspace.getConfiguration("workbench.editor").update("enablePreview", false, vscode.ConfigurationTarget.Global);
 		vscode.workspace.getConfiguration("workbench.tips").update("enabled", false, vscode.ConfigurationTarget.Global);
 		vscode.workspace.getConfiguration("workbench").update("startupEditor", "none", vscode.ConfigurationTarget.Global);
+		vscode.workspace.getConfiguration("workbench").update("activityBar", "false", vscode.ConfigurationTarget.Global);
 
 		//Editor
 		vscode.workspace.getConfiguration("editor.minimap").update("enabled", false, vscode.ConfigurationTarget.Global);
@@ -27,7 +28,7 @@ export function activate(context: vscode.ExtensionContext) {
 		vscode.workspace.getConfiguration("python").update("languageServer", "Pylance", vscode.ConfigurationTarget.Global);
 		vscode.workspace.getConfiguration("python.linting").update("enabled", true, vscode.ConfigurationTarget.Global);
 		vscode.workspace.getConfiguration("python.linting").update("pylintEnabled", true, vscode.ConfigurationTarget.Global);
-		let myPylintArgs: string[] = ['--disable=W0614', '--disable=C0111', '--disable=W0401', '--disable=C0411', '--disable=C0413', '--disable=E0401', '--disable=C0326', '--disable=C0303', '--disable=C0305', '--disable=C0103'];
+		let myPylintArgs: string[] = ['--disable=W,C'];
 		//let pylint = vscode.workspace.getConfiguration("python.linting").get("pylintArgs");
 		vscode.workspace.getConfiguration("python.linting").update("pylintArgs", myPylintArgs, vscode.ConfigurationTarget.Global);
 

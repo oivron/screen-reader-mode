@@ -20,3 +20,15 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
     - jupyter.disableJupyterAutoStart: true
 - Added Lisence
 - Updated readme file
+
+## [1.1.0] - 2023-03-10
+
+- Removed disabling Pylint messages by numerical IDs (e.g. W0614)
+- Added disabling Pylint messages by category (e.g. W)
+- Added keybinding for easy access to the Status Bar
+- Added keybindings for macOS
+- Updated readme file
+- Updated description (package.json)
+- Replaced icon
+- Renamed extension Screen Reader Mode (previously Recommended Settings)
+- npm updates
