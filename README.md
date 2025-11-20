@@ -127,5 +127,5 @@ A description of all accessibility features in Visual Studio Code can be found a
 
 ## Release Notes
 
-### [2.0.17] - 2025-11-18
+### [2.0.18] - 2025-11-20
 See [CHANGELOG](CHANGELOG.md).

@@ -1,5 +1,10 @@
 # Changelog
 
+## [2.0.18] - 2025-11-20
+
+### Changed
+- Fixed vulnerabilities in `glob` and `js-yaml` by upgrading to safe versions.
+
 ## [2.0.17] - 2025-11-18
 
 ### Added
@@ -17,7 +22,6 @@
 - Refactored code to address breaking changes in TypeScript.
 - General code refactoring and improvements throughout the extension.
 - Updated `README.md`.
-
 
 ### Removed
 - Deprecated function for updating user settings.
