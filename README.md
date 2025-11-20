@@ -5,119 +5,127 @@
 ![Downloads](https://img.shields.io/visual-studio-marketplace/d/Statped.recommendedsettings)
 ![Repo size](https://img.shields.io/github/license/oivron/settings-extension-vscode)
 
-A Visual Studio Code extension for users of screen readers like [NVDA](https://www.nvaccess.org/), [JAWS](https://www.freedomscientific.com/products/software/jaws/) and VoiceOver. It is intended for students who are learning to code with Python, but also other languages. The extension updates User Settings and adds a few extra keyboard shortcuts. The overall idea is to make things as simple as possible. [See list of features below](#features).
+**An extension for Visual Studio Code designed for those who rely on screen readers such as [NVDA](https://www.nvaccess.org/), [JAWS](https://www.freedomscientific.com/products/software/jaws/), and [VoiceOver](https://support.apple.com/en-us/guide/voiceover/welcome/mac).**
+It offers enhanced user experience for blind programmers, making it especially valuable for students learning to code.
+The extension offers easy tweaking of user settings and simplifies the output of Python scripts. It may be used with any programming languages.
 
 ## Table of Contents
 - [Features](#features)
-- [How to use](#how-to-use)
-- [Available Commands and shortcuts](#available-commands-and-shortcuts)
-- [Modified User Settings](#modified-user-settings)
-- [Prerequisits](#prerequisits)
-- [Visual Studio Code Accessibility](#visual-studio-code-accessibility)
+- [Installation](#installation)
+- [Usage](#usage)
+- [License](#license)
+- [Visual Studio Code Accessibility Features](#visual-studio-code-accessibility-features)
 - [Release Notes](#release-notes)
 
 ## Features
+### 1. Screen Reader Mode: Tweak User Settings
+![Screenshot showing checkboxes for tweaking user settings](./img/tweak.png)
 
-This extension [disables and enables various user settings](#modified-user-settings). It also [adds some new shortcuts](#available-commands-and-shortcuts).
+**Use this to enhance the user experience for blind programmers**.
 
-### Disables
+Choose from the below options. They will affect the user interface and certain notifications:
 
-- Disables [Git](https://code.visualstudio.com/docs/sourcecontrol/overview) (students will basically work on smaller projects and do not need Git)
-- Disables Preview Mode (each file will have their own tab)
-- Disables Watermark Tips when no editor is open
-- Disables Startup Editor (the startup editor will be empty until you open a file)
-- Disables Minimap (not accessible with screen readers)
-- Disables Hover (not accessible with screen readers)
-- Disables Parameterhints (not accessible with screen readers)
-- Disables Workspace Trust (students will basically work on their own files)
-- Disables Jupyter Auto Start (you can always start Jupyter later on)
-- Disables Recommended Extensions (to avoid unneccesary notifications)
-- Disables Pylint messages in the Warning and Convention categories (only showing errors)
+- **Hide minimap**: Hide the code outline. The minimap can obscure parts of the code when collaborating with a teacher or other sighted person.
+- **Start without editor**: Visual Studio Code will launch without opening an editor window.
+- **Hide hint in empty editor**: Hints will not appear in an empty editor.
+- **Disable workspace trust**: Trust confirmation isn’t needed when working on your own files.
+- **Ignore missing Git warning**: If you don’t use Git, this will prevent VSCode from displaying warnings about Git not being installed.
+- **Ignore recommendations from Extensions**: Extension recommendations will not be shown.
+- **Disable automatic hover**: Hover will be disabled but can still be triggered manually.
 
-### Enables or adds
+### 2. Screen Reader Mode: Toggle Accessibility Verbosity
 
-- Enables [Pylint](https://code.visualstudio.com/docs/python/linting) (If Pylint is not installed, you will be notified)
-- Enables Accessibility Support (for screen readers to work properly)
-- Adds shortcut to toggle Quick Suggestions on or off
-- Adds shortcut to access the Notifications list
-- Adds shortcut to access the Status Bar
+**Use this feature to prevent screen readers from announcing accessibility information**.
 
-## How to use
-
-1. Make sure [Python](https://www.python.org/) is installed on your system.
-2. Open Extensions view and make sure you have the [Python extension from Microsoft](https://marketplace.visualstudio.com/items?itemName=ms-python.python) installed.
-3. From Extensions view, search for and install this extension ('__Recommended Settings__' from publisher Statped).
-4. Restart Visual Studio Code.
-5. The installed extension will now provide you with a few additional commands.
-    - __Recommended User Settings (Screen Readers)__
-    - __Toggle Automatic Quick Suggestions__
-    - __Notifications: Show Notifications__
-    - __Focus Status Bar__
-5. Open Command Palette and select __Recommended User Settings (Screen Readers)__. This will modify your Visual Studio Code User Settings.
-
-## Available Commands and shortcuts
-
-The extension provides you with some new Command Palette commands:
-
-| Command                                        | Windows       | macOS|Description                                                   |
-| -----------                                    | -----------    | ---------- | -----------                                                   |
-| __Recommended User Settings (Screen Readers)__ | N/A            | N/A | Updates User Settings with recommended settings |
-| __Toggle Automatic Quick Suggestions__*         | __Ctrl+Alt+Q__ | __Command+Option+Q__ | Toggles Automatic Quick Suggestions on or off                 |
-| __Notifications: Show Notifications__          | __Ctrl+Alt+N__ | __Command+Option+N__ | Shows notification list                      |
-| __Focus Status Bar__          | __Ctrl+Alt+B__ | __Command+Option+B__ | Sets focus on the first item of the Status Bar                      |
-|||||
-
-*__Toggles Automatic Quick Suggestions on or off__: For some screen reader users, Quick Suggestions makes coding more complicated. The suggestions list that pops up might be confusing and do not work well with all screen readers. When disabled, Quick Suggestions may still be triggered manually with __Ctrl+Space__.
-
-## Modified User Settings
-
-This extension modifies User Settings as described below. User Settings are located at:
-
-- Windows: `%APPDATA%\Code\User\settings.json`
-- macOS: `$HOME/Library/Application Support/Code/User/settings.json`
+While such information can be helpful, it may become repetitive or distracting over time. For example, each time you access the terminal, the screen reader will announce:
+“*Use Alt+F1/Option+F1 for terminal accessibility help*.”
 
 ```
-// Git
-"git.enabled": false,
-"git.autofetch": false,
-"git.ignoreMissingGitWarning": true,
-
-// Workbench
-"workbench.editor.enablePreview": false,
-"workbench.tips.enabled": false,
-"workbench.startupEditor": "none",
-
-// Editor
-"editor.minimap.enabled": false,
-"editor.hover.enabled": false,
-"editor.parameterHints.enabled": false,
-"editor.accessibilitySupport": "on",
-
-// Security
-"security.workspace.trust.enabled": false,
-
-// Python
-"python.languageServer": "Pylance",
-"python.linting.enabled": true,
-"python.linting.pylintEnabled": true
-"python.linting.pylintArgs": [
-    "--disable:W,C" //disables Pylint messages in the Warning and Convention categories
-]
-
-// Miscellaneous
-"jupyter.disableJupyterAutoStart": true,
-"extensions.ignoreRecommendations": true
+// Excerpt from user settings:
+// Provide information about how to access the terminal accessibility help menu when the terminal is focused.
+"accessibility.verbosity.terminal": false
 ```
 
-## Prerequisits
+### 3. Screen Reader Mode: Toggle Accessibility Signals
 
-[Python extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python) from Microsoft.
+**Use this feature to prevent screen readers from announcing accessibility signals**.
 
-## Visual Studio Code Accessibility
+Accessibility signals include sounds and announcements that indicate markers in your code, such as errors, warnings, and breakpoints.
+While these signals can be helpful, but they may become repetitive or distracting over time—similar to accessibility verbosity.
+For example, when you navigate to a line with an error, an error message will be announced and a sound will play simultaneously.
 
+```
+// Excerpt from user settings:
+// Plays a signal - sound (audio cue) and/or announcement (alert) - when the active line has an error.
+"accessibility.signals.lineHasError": {
+	"sound": "off",
+	"announcement": "off"
+}
+```
+
+### 4. Screen Reader Mode: Toggle Automatic Quick Suggestions
+![Screenshot showing code completion suggestions](./img/completion.png)
+
+**Use this to prevent automatic quick suggestions and parameter hints from appearing while typing**.
+
+Automatic suggestions and hints can be challenging to use with a screen reader. For a better experience, consider disabling them. Instead, trigger suggestions and hints manually when needed. This setting also affects suggestions in the terminal.
+
+### 5. Screen Reader Mode: Run current Python script
+
+**Use this to run the active Python script in a terminal named "Python" with minimal output**.
+
+Other methods of running Python files may produce excessive output, which can be challenging for screen reader users.
+Unnecessary text takes up valuable space on a braille display and can cause text-to-speech to become cluttered or distracting.
+
+```
+# Terminal output when executing Python script from Run > Run Without Debugging:
+prompt> & 'c:\Users\<userID>\AppData\Local\Programs\Python\Python312\python.exe' 'c:\Users\<userID>\.vscode\extensions\ms-python.debugpy-2024.10.0-win32-x64\bundled\libs\debugpy\adapter/../..\debugpy\launcher' '64457' '--' 'c:\Users\<userID>\Documents\Coding\hello.py' 
+Hello world!
+
+# Terminal output when executing Python script from Run Python File:
+prompt> & C:/Users/<userID>/AppData/Local/Programs/Python/Python312/python.exe c:/Users/<userID>/Documents/Coding/hello.py
+Hello world!
+
+# Terminal output when executing Python script with the feature Run current Python script included in this extension:
+prompt> python hello.py
+Hello world!
+```
+
+## Installation
+1. From Extensions view, search for and install the extension, or
+1. Install the extension from [https://marketplace.visualstudio.com/items?itemName=Statped.screen-reader-mode](https://marketplace.visualstudio.com/items?itemName=Statped.screen-reader-mode)
+2. Restart Visual Studio Code
+
+## Usage
+
+### Available Commands and keyboard shortcuts
+Commands are available from the Command Palette. Some commands also have assigned keyboard shortcuts.
+
+| Screen Reader Mode Commands   | Windows   | macOS|Description |
+| -----------| -----------    | ---------- | -----------                                                   |
+| __Screen Reader Mode: Tweak User Settings__   | N/A | N/A | Disable various settings to enhance user experience.   |
+| __Screen Reader Mode: Toggle Accessibility Verbosity__    | N/A | N/A | Toggle Accessibility Verbosity on or off. |
+| __Screen Reader Mode: Toggle Accessibility Signals__  | N/A | N/A | Toggle Accessibility Signals on or off. |
+| __Screen Reader Mode: Toggle Automatic Quick Suggestions__    | N/A | N/A | Toggle automatic quick suggestions and parameter hints on or off. |
+| __Screen Reader Mode: Run current Python script__ | __Ctrl+Alt+F5__   | __Control+Option+F5__ | Run the current Python script in a terminal named Python with minimal output. |
+
+Below you'll find some standard VSCode commands that may also be useful.
+
+| VSCode Commands   | Windows   | macOS|Description |
+| -----------| -----------    | ---------- | -----------                                                   |
+| __Trigger Suggest__ | __Ctrl+Space__ | __Control+Space__ | Show suggestions. |
+| __Show or focus hover__ | __Ctrl+K Ctrl+I__| __Command+K Command+I__ | Manually trigger hover. |
+| __Trigger Parameter Hints__ | __Ctrl+Shift+Space__ | __Shift+Command+Space__ | Show parameter hints. |
+| __Show Notifications__ | __Ctrl+Shift+Alt+N__ | __Command+K Shift+Command+N__ | Show notifications. |
+| __Open Accessibility Help__ (editor or terminal) | __Alt+F1__ | __Option+F1__ | Show accessibility help for the editor or terminal. |
+
+## License
+GPL-3.0.
+
+## Visual Studio Code Accessibility Features
 A description of all accessibility features in Visual Studio Code can be found at [code.visualstudio.com/docs/editor/accessibility](https://code.visualstudio.com/docs/editor/accessibility).
 
 ## Release Notes
 
-## [1.1.1] - 2023-03-10
-- Fixed typo in package.json
+### [2.0.17] - 2025-11-18
+See [CHANGELOG](CHANGELOG.md).
