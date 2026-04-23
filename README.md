@@ -1,9 +1,9 @@
 # Screen Reader Mode README
 
-![Version](https://img.shields.io/visual-studio-marketplace/v/Statped.recommendedsettings)
+![Version](https://img.shields.io/visual-studio-marketplace/v/Statped.screen-reader-mode)
 ![Latest](https://img.shields.io/github/last-commit/oivron/settings-extension-vscode)
-![Downloads](https://img.shields.io/visual-studio-marketplace/d/Statped.recommendedsettings)
-![Repo size](https://img.shields.io/github/license/oivron/settings-extension-vscode)
+![Downloads](https://img.shields.io/visual-studio-marketplace/d/Statped.screen-reader-mode)
+![License](https://img.shields.io/github/license/oivron/settings-extension-vscode)
 
 **An extension for Visual Studio Code designed for those who rely on screen readers such as [NVDA](https://www.nvaccess.org/), [JAWS](https://www.freedomscientific.com/products/software/jaws/), and [VoiceOver](https://support.apple.com/en-us/guide/voiceover/welcome/mac).**
 It offers enhanced user experience for blind programmers, making it especially valuable for students learning to code.
@@ -127,5 +127,5 @@ A description of all accessibility features in Visual Studio Code can be found a
 
 ## Release Notes
 
-### [2.0.18] - 2025-11-20
+### [2.0.19] - 2026-04-23
 See [CHANGELOG](CHANGELOG.md).

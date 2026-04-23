@@ -2,7 +2,7 @@
 	"name": "screen-reader-mode",
 	"displayName": "Screen Reader Mode",
 	"description": "Enhanced User Experience for Screen Reader Users. Ideal for Blind Students Learning to Code. Custom User Settings, Custom Keybinding, and Simplified Python Output.",
-	"version": "2.0.18",
+	"version": "2.0.19",
 	"publisher": "Statped",
 	"author": {
 		"name": "Øivind Rønning",

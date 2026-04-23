@@ -1,4 +1,8 @@
 # Changelog
+## [2.0.19] - 2026-04-23
+
+- Fixed badges in `README.md`.
+- Fixed wrong version number in `package-lock.json`.
 
 ## [2.0.18] - 2025-11-20
 

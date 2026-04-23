@@ -18,6 +18,7 @@ export function activate(context: vscode.ExtensionContext) {
 		toggleQuickSuggestionsSettings();
 	});
 
+	
 	let runPythonCodeCommand = vscode.commands.registerCommand('screenreadermode.runPythonCode', () => {
 		runPythonCode();
 	});
